@@ -1,0 +1,138 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fa;
+}
+
+/* Navbar */
+.navbar{
+    background:#ff6b35;
+}
+
+.navbar-brand{
+    color:white !important;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:15px;
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:yellow !important;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+    background-size:cover;
+    background-position:center;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+    font-weight:bold;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero .btn{
+    margin-top:20px;
+}
+
+/* Cards */
+.card{
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+/* Price */
+.price{
+    color:#ff6b35;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Buttons */
+.btn-orange{
+    background:#ff6b35;
+    color:white;
+}
+
+.btn-orange:hover{
+    background:#e65a28;
+    color:white;
+}
+
+/* Forms */
+.form-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+    margin-top:50px;
+}
+
+.form-control{
+    border-radius:10px;
+}
+
+/* Dashboard Cards */
+.dashboard-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+.dashboard-card h2{
+    color:#ff6b35;
+    font-weight:bold;
+}
+
+/* Tables */
+table{
+    background:white;
+}
+
+/* Footer */
+footer{
+    background:#212529;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:50px;
+}

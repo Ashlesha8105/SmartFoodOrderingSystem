@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="/dashboard">🍔 Smart Food Admin</a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/dashboard">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/add-food">Add Food</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/food-list">Food List</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/customers">Customers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-orders">Orders</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="/">Logout</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- Dashboard -->
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">📊 Admin Dashboard</h2>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+            <div class="dashboard-card">
+                <h2>{{ total_foods }}</h2>
+                <h5>Total Foods</h5>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="dashboard-card">
+                <h2>{{ total_customers }}</h2>
+                <h5>Customers</h5>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="dashboard-card">
+                <h2>{{ total_orders }}</h2>
+                <h5>Orders</h5>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="dashboard-card">
+                <h2>₹{{ revenue }}</h2>
+                <h5>Total Revenue</h5>
+            </div>
+        </div>
+
+    </div>
+
+<div class="row mt-4">
+
+    <div class="col-md-3">
+
+        <div class="card text-center border-warning shadow">
+
+            <div class="card-body">
+
+                <h2 class="text-warning">
+                    {{ pending }}
+                </h2>
+
+                <h5>Pending Orders</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center border-primary shadow">
+
+            <div class="card-body">
+
+                <h2 class="text-primary">
+                    {{ approved }}
+                </h2>
+
+                <h5>Approved Orders</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center border-success shadow">
+
+            <div class="card-body">
+
+                <h2 class="text-success">
+                    {{ delivered }}
+                </h2>
+
+                <h5>Delivered Orders</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center border-danger shadow">
+
+            <div class="card-body">
+
+                <h2 class="text-danger">
+                    {{ cancelled }}
+                </h2>
+
+                <h5>Cancelled Orders</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <hr class="my-5">
+
+    <div class="row">
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card p-4">
+
+                <h4>🍔 Quick Actions</h4>
+
+                <div class="d-grid gap-2 mt-3">
+
+                    <a href="/add-food" class="btn btn-orange">
+                        Add New Food
+                    </a>
+
+                    <a href="/food-list" class="btn btn-primary">
+                        Manage Food
+                    </a>
+
+                    <a href="/customers" class="btn btn-success">
+                        View Customers
+                    </a>
+
+                    <a href="/admin-orders" class="btn btn-dark">
+                        View Orders
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card p-4">
+
+                <h4>📌 Project Information</h4>
+
+                <table class="table table-bordered mt-3">
+
+                    <tr>
+                        <th>Project</th>
+                        <td>Smart Food Order</td>
+                    </tr>
+
+                    <tr>
+                        <th>Language</th>
+                        <td>Python Flask</td>
+                    </tr>
+
+                    <tr>
+                        <th>Database</th>
+                        <td>SQLite</td>
+                    </tr>
+
+                    <tr>
+                        <th>Frontend</th>
+                        <td>HTML, CSS, Bootstrap</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p class="text-center py-3 mb-0">
+        © 2026 Smart Food Order System | Admin Panel
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

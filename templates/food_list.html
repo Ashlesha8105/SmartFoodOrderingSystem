@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="/dashboard">🍔 Smart Food Admin</a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/add-food">Add Food</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/food-list">Food List</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/customers">Customers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-orders">Orders</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="/">Logout</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- Food List -->
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">🍕 Food Items List</h2>
+
+    <div class="card p-3">
+
+        <table class="table table-striped table-hover text-center">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Food Image</th>
+                    <th>Food Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+{% if foods %}
+
+    {% for food in foods %}
+
+    <tr>
+
+        <td>{{ food.id }}</td>
+
+        <td>
+            <img src="{{ food.image }}"
+                 width="70"
+                 height="70">
+        </td>
+
+        <td>{{ food.food_name }}</td>
+
+        <td>{{ food.category }}</td>
+
+        <td>₹{{ food.price }}</td>
+
+        <td>
+
+            <a href="/edit-food/{{ food.id }}"
+               class="btn btn-primary btn-sm">
+                Edit
+            </a>
+
+            <a href="/delete-food/{{ food.id }}"
+               class="btn btn-danger btn-sm"
+               onclick="return confirm('Delete this food?')">
+                Delete
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+{% else %}
+
+<tr>
+
+    <td colspan="6" class="text-center text-danger">
+        No Food Items Found
+    </td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+    </div>
+
+</div>
+
+<footer>
+    <p class="text-center py-3 mb-0">
+        © 2026 Smart Food Order System
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

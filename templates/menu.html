@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">🍔 Smart Food</a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menuBar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuBar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/menu">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Cart</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/orders">My Orders</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Logout</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- Heading -->
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">
+        🍽 Our Delicious Menu
+    </h2>
+
+    <!-- Search -->
+
+    <div class="row mb-4">
+
+        <div class="col-md-6 mx-auto">
+
+            <input type="text" class="form-control" placeholder="Search Food">
+
+        </div>
+
+    </div>
+
+    <!-- Food Cards -->
+
+    <div class="row">
+
+        <!-- Food 1 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Pizza</h5>
+            <p class="price">₹299</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Pizza">
+                <input type="hidden" name="price" value="299">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 2 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Burger</h5>
+            <p class="price">₹149</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Burger">
+                <input type="hidden" name="price" value="149">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 3 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>French Fries</h5>
+            <p class="price">₹99</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="French Fries">
+                <input type="hidden" name="price" value="99">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 4 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Hot Dog</h5>
+            <p class="price">₹129</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Hot Dog">
+                <input type="hidden" name="price" value="129">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 5 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Sandwich</h5>
+            <p class="price">₹119</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Sandwich">
+                <input type="hidden" name="price" value="119">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 6 -->
+
+       <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Pasta</h5>
+            <p class="price">₹199</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Pasta">
+                <input type="hidden" name="price" value="199">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 7 -->
+
+       <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Cold Drink</h5>
+            <p class="price">₹49</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Cold Drink">
+                <input type="hidden" name="price" value="49">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Food 8 -->
+
+        <div class="col-md-3 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="card-img-top">
+        <div class="card-body text-center">
+            <h5>Chocolate Cake</h5>
+            <p class="price">₹249</p>
+
+            <form action="/add_to_cart" method="POST">
+                <input type="hidden" name="food_name" value="Chocolate Cake">
+                <input type="hidden" name="price" value="249">
+                <button type="submit" class="btn btn-orange w-100">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Smart Food Order System</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="/dashboard">🍔 Smart Food Admin</a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add-food">Add Food</a></li>
+                <li class="nav-item"><a class="nav-link" href="/food-list">Food List</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/customers">Customers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admin-orders">Orders</a></li>
+                <li class="nav-item"><a class="nav-link text-warning" href="/">Logout</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- Customers Table -->
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">👥 Registered Customers</h2>
+
+    <div class="card p-3">
+
+        <table class="table table-striped table-hover text-center">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for customer in customers %}
+
+               <tr>
+
+                 <td>{{ customer.id }}</td>
+                 <td>{{ customer.name }}</td>
+                 <td>{{ customer.email }}</td>
+                 <td>{{ customer.phone }}</td>
+                 <td>{{ customer.address }}</td>
+
+                </tr>
+
+               {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<footer>
+    <p class="text-center py-3 mb-0">
+        © 2026 Smart Food Order System
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
